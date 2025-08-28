@@ -1,0 +1,78 @@
+*codecompanion-copilot-enterprise.txt*      For NVIM v0.11.0     Last change: 2025 August 28
+
+==============================================================================
+CodeCompanion Copilot Enterprise Adapter *codecompanion-copilot-enterprise*
+
+Adds a custom CodeCompanion adapter for GitHub Copilot Business/Enterprise plans.
+
+==============================================================================
+REQUIREMENTS *codecompanion-copilot-enterprise-requirements*
+
+- GitHub Copilot Business/Enterprise plan for your organization
+- codecompanion.nvim (https://codecompanion.olimorris.dev/)
+- One of the following plugins, setup for an enterprise account:
+    - copilot.vim (https://github.com/github/copilot.vim), see |g:copilot_enterprise_uri|
+    - copilot.lua (https://github.com/zbirenbaum/copilot.lua), see `auth_provider_url` at |copilot-copilot.lua-setup-and-configuration|
+
+==============================================================================
+INSTALLATION *codecompanion-copilot-enterprise-installation*
+
+Using lazy.nvim:
+
+    {
+        "olimorris/codecompanion.nvim",
+        dependencies = {
+            "dyamon/codecompanion-copilot-enterprise.nvim"
+            -- other plugins...
+        }
+    }
+
+==============================================================================
+CONFIGURATION *codecompanion-copilot-enterprise-configuration*
+
+Add the adapter to CodeCompanion:
+
+If your organization is available at `https://acme.ghe.com`:
+
+    require("codecompanion").setup({
+      adapters = {
+        http = {
+          copilot_enterprise = function()
+            local adapter = require 'codecompanion.adapters.copilot_enterprise'
+            adapter.opts.provider_url = "acme.ghe.com"
+            return adapter
+          end,
+        },
+      },
+      strategies = {
+        chat = {
+          adapter = {
+            name = "copilot_enterprise",
+            model = "claude-sonnet-4",
+          },
+        },
+        inline = {
+          adapter = "copilot_enterprise",
+        },
+        cmd = {
+          adapter = "copilot_enterprise",
+        },
+      },
+    })
+
+==============================================================================
+FUTURE ROADMAP *codecompanion-copilot-enterprise-roadmap*
+
+- Copilot statistics: If the API endpoint for enterprise accounts becomes available, the plugin supports it already.
+
+==============================================================================
+ACKNOWLEDGEMENTS *codecompanion-copilot-enterprise-acknowledgements*
+
+- Oli Morris (https://github.com/olimorris) for creating CodeCompanion.nvim.
+
+==============================================================================
+LICENSE *codecompanion-copilot-enterprise-license*
+
+MIT
+
+vim:tw=78:ts=8:noet:ft=help:norl:
