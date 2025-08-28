@@ -54,8 +54,8 @@ function M.get_models(adapter, get_and_authorize_token_fn)
     return curl.get(url, {
       sync = true,
       headers = headers,
-      insecure = config.adapters.opts.allow_insecure,
-      proxy = config.adapters.opts.proxy,
+      insecure = config.adapters.http.opts.allow_insecure,
+      proxy = config.adapters.http.opts.proxy,
     })
   end)
 
@@ -89,7 +89,7 @@ function M.get_models(adapter, get_and_authorize_token_fn)
   end
 
   _cached_models = models
-  _cache_expires = utils.refresh_cache(_cache_file, config.adapters.opts.cache_models_for)
+  _cache_expires = utils.refresh_cache(_cache_file, config.adapters.http.opts.cache_models_for)
 
   return models
 end
@@ -122,8 +122,8 @@ function M.get_copilot_stats(adapter, get_and_authorize_token_fn)
         Accept = "*/*",
         ["User-Agent"] = "CodeCompanion.nvim",
       },
-      insecure = config.adapters.opts.allow_insecure,
-      proxy = config.adapters.opts.proxy,
+      insecure = config.adapters.http.opts.allow_insecure,
+      proxy = config.adapters.http.opts.proxy,
     })
   end)
 

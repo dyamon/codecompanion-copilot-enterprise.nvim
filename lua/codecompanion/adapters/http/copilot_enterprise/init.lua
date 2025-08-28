@@ -1,9 +1,9 @@
 local config = require("codecompanion.config")
-local copilot = require("codecompanion.adapters.copilot")
+local copilot = require("codecompanion.adapters.http.copilot")
 local curl = require("plenary.curl")
-local helpers = require("codecompanion.adapters.copilot_enterprise.helpers")
+local helpers = require("codecompanion.adapters.http.copilot_enterprise.helpers")
 local log = require("codecompanion.utils.log")
-local openai = require("codecompanion.adapters.openai")
+local openai = require("codecompanion.adapters.http.openai")
 
 ---@alias CopilotEnterpriseOAuthToken string|nil
 local _oauth_token
@@ -105,8 +105,8 @@ local function authorize_token(self)
       Authorization = "Bearer " .. _oauth_token,
       ["Accept"] = "application/json",
     },
-    insecure = config.adapters.opts.allow_insecure,
-    proxy = config.adapters.opts.proxy,
+    insecure = config.adapters.http.opts.allow_insecure,
+    proxy = config.adapters.http.opts.proxy,
     on_error = function(err)
       log:error("Copilot Enterprise Adapter: Token request error %s", err)
     end,
