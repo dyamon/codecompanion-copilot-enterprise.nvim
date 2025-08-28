@@ -5,6 +5,9 @@
     A CodeCompanion adapter for GitHub Copilot Business/Enterprise.
     <br/>
     <br/>
+    <a href="https://github.com/olimorris/codecompanion.nvim/releases/tag/v17.18.0">
+        <img src="https://img.shields.io/badge/CodeCompanion-v17.18.0-C678DD?style=for-the-badge">
+    </a>
     <a href="https://neovim.io">
         <img src="https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white">
     </a>

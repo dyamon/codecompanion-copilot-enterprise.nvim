@@ -9,7 +9,7 @@ Adds a custom CodeCompanion adapter for GitHub Copilot Business/Enterprise plans
 REQUIREMENTS *codecompanion-copilot-enterprise-requirements*
 
 - GitHub Copilot Business/Enterprise plan for your organization
-- codecompanion.nvim (https://codecompanion.olimorris.dev/)
+- codecompanion.nvim v17.18.0 (https://codecompanion.olimorris.dev/)
 - One of the following plugins, setup for an enterprise account:
     - copilot.vim (https://github.com/github/copilot.vim), see |g:copilot_enterprise_uri|
     - copilot.lua (https://github.com/zbirenbaum/copilot.lua), see `auth_provider_url` at |copilot-copilot.lua-setup-and-configuration|
