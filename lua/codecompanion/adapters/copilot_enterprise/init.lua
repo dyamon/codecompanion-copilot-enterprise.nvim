@@ -156,11 +156,11 @@ return {
   },
   headers = copilot.headers,
 
-  get_stats = function(self)
+  get_copilot_stats = function(self)
     return helpers.get_copilot_stats(self, get_and_authorize_token)
   end,
 
-  show_stats = function(self)
+  show_copilot_stats = function(self)
     return helpers.show_copilot_stats(self, get_and_authorize_token)
   end,
 
