@@ -1,9 +1,9 @@
-local config = require 'codecompanion.config'
-local copilot = require 'codecompanion.adapters.copilot'
-local curl = require 'plenary.curl'
-local helpers = require 'codecompanion.adapters.copilot_enterprise.helpers'
-local log = require 'codecompanion.utils.log'
-local openai = require 'codecompanion.adapters.openai'
+local config = require("codecompanion.config")
+local copilot = require("codecompanion.adapters.copilot")
+local curl = require("plenary.curl")
+local helpers = require("codecompanion.adapters.copilot_enterprise.helpers")
+local log = require("codecompanion.utils.log")
+local openai = require("codecompanion.adapters.openai")
 
 ---@alias CopilotEnterpriseOAuthToken string|nil
 local _oauth_token
