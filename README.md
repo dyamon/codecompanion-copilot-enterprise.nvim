@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">· CodeCompanion GitHub Copilot Enterprise adapter ·</h1>
+  <h1 align="center">· CodeCompanion Copilot Enterprise adapter ·</h1>
 
   <p align="center">
     A CodeCompanion adapter for GitHub Copilot Business/Enterprise.
@@ -24,8 +24,8 @@ Adds a custom CodeCompanion adapter for GitHub Copilot Business/Enterprise plans
 - A GitHub Copilot Business/Enterprise plan for your organization,
 - [codecompanion.nvim](https://codecompanion.olimorris.dev/), and
 - one of the following plugins, setup for an enterprise account:
-    - [copilot.vim](https://github.com/github/copilot.vim), look at the [`g:copilot_enterprise_uri`](https://github.com/github/copilot.vim/blob/v1.53.0/doc/copilot.txt#L76-L82) global option;
-    - [copilot.lua](https://github.com/zbirenbaum/copilot.lua), look at the config option [`auth_provider_url`](https://github.com/zbirenbaum/copilot.lua/blob/master/doc/copilot.txt#L80-L84).
+    - [copilot.vim](https://github.com/github/copilot.vim), look for the [`g:copilot_enterprise_uri`](https://github.com/github/copilot.vim/blob/v1.53.0/doc/copilot.txt#L76-L82) global option;
+    - [copilot.lua](https://github.com/zbirenbaum/copilot.lua), look for the config option [`auth_provider_url`](https://github.com/zbirenbaum/copilot.lua/blob/master/doc/copilot.txt#L80-L84).
 
 ## 📦 Installation
 
@@ -87,7 +87,7 @@ require("codecompanion").setup({
 
 ## 🔮 Future Roadmap
 
-- [ ] Copilot statistics: it seems like the same API endpoint used for individual GitHub accounts to get statistics about Copilot usage is available for enterprise accounts as well, but returns a whooping 404.
+- [ ] **Copilot statistics**: it seems like the same API endpoint used for individual GitHub accounts to get statistics about Copilot usage is available for enterprise accounts as well, but returns a whooping 404;
       I can replicate this behaviour in VS Code as well. If the feature becomes available in the future, the plugin supports it already.
 
 ## 🙏 Acknowledgements
