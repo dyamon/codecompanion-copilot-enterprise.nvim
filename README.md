@@ -62,7 +62,7 @@ require("codecompanion").setup({
   adapters = {
     http = {
       copilot_enterprise = function()
-        local adapter = require 'codecompanion.adapters.copilot_enterprise'
+        local adapter = require 'codecompanion.adapters.http.copilot_enterprise'
         adapter.opts.provider_url = "acme.ghe.com" -- 'https://' can be removed but doesn't hurt.
         return adapter
       end,
